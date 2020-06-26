@@ -1,7 +1,8 @@
 # spigot-admin
 Some short scripts I use for managing a spigot server
 
-
+| File                | Description                                                                                             |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
 | startVanilla.sh     | For starting the server using vanilla server. May not be useful.                                        |
 | version             | File containing the version to which to update spigot/run. Used by updateBuildTools.sh and startSpigot. |
 | updateBuildTools.sh | Downloads the latest build tools for spigot and runs it for the version given in the `version` file.    |
