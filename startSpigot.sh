@@ -3,6 +3,7 @@
 # Uncomment the next line to disable
 # exit 0
 
+unset DISPLAY
 read SPIGOT_VERSION < version
 
 [[ -f ./Archive/worlds_backup.tar.gz ]] && rm Archive/worlds_backup.tar.gz
