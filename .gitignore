@@ -1,0 +1,10 @@
+./**
+.*
+**/
+*.jar
+*.yml
+*.log
+*.txt
+*.json
+*.desktop
+*.properties
