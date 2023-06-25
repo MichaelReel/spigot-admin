@@ -6,6 +6,8 @@
 unset DISPLAY
 read SPIGOT_VERSION < version
 
+mkdir --parents Archive
+
 [[ -f ./Archive/worlds_backup.tar.gz ]] && rm Archive/worlds_backup.tar.gz
 [[ -f ./Archive/worlds.tar.gz ]] && mv Archive/worlds.tar.gz Archive/worlds_backup.tar.gz
 [[ -d ./world ]] && tar -czvf Archive/worlds.tar.gz world*
