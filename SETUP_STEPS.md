@@ -136,7 +136,7 @@ And change the line `eula=false` to `eula=TRUE`.
 
 ### Stop the server
 
-If spigot is not running, stop it
+If spigot is now running, stop it
 
 ```sh
 > stop
