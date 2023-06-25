@@ -154,3 +154,63 @@ each of these are already documented:
 
 It's also recommended to add some plugins for passwords or admin tooling. These might
 require some research.
+
+Make sure to also setup appropriate port forwarding.
+
+## Setup server to run on startup using systemd
+
+### Create a systemd unit file
+
+```sh
+sudo vim /lib/systemd/system/minecraft.service
+```
+
+And give it the content to configure it as a service:
+
+```conf
+[Unit]
+Description=Run minecraft as the mc user
+Wants=network.target
+After=network.target
+
+[Service]
+Type=forking
+User=mc
+Group=mc
+WorkingDirectory=/home/mc/mc_server/
+ExecStart=/home/mc/mc_server/startSpigot.sh
+ExecStop=/home/mc/mc_server/stopSpigot.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+### Enable minecraft to start on boot
+
+From a sudoer user (probably not the `mc` user), refresh the systemd configuration files
+
+```sh
+sudo systemctl daemon-reload
+```
+
+Then enable the service to start automatically at boot:
+
+```sh
+sudo systemctl enable minecraft.service
+```
+
+### Test the systemd configuration
+
+Start the service and connect to make sure it works:
+
+```sh
+sudo systemctl start minecraft.service
+```
+
+Stop the service and make sure you can no longer connect:
+
+```sh
+sudo systemctl stop minecraft.service
+```

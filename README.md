@@ -10,3 +10,6 @@ Some short scripts I use for managing a spigot server
 | startSpigot.sh      | Makes a backup of the current world files, then starts the spigot server under a screen session.        |
 | stopSpigot.sh       | Stops the spigot server.                                                                                |
 | attachMinecraft.sh  | Attaches to the screen session to allow viewing the output and entering admin commands.                 |
+
+When attached to the screen session (after running attachMinecraft.sh) use the commands
+`ctrl`+`a` then `ctrl`+`d` to detach.
