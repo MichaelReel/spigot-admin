@@ -10,4 +10,4 @@ read SPIGOT_VERSION < version
 [[ -f ./Archive/worlds.tar.gz ]] && mv Archive/worlds.tar.gz Archive/worlds_backup.tar.gz
 [[ -d ./world ]] && tar -czvf Archive/worlds.tar.gz world*
 
-screen -dmS minecraft-server-screen java -Xms8G -Xmx8G -XX:+UseConcMarkSweepGC -jar spigot-${SPIGOT_VERSION}.jar
+screen -dmS minecraft-server-screen java -Xms8G -Xmx8G -XX:+UseG1GC -jar spigot-${SPIGOT_VERSION}.jar
