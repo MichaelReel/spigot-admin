@@ -148,7 +148,7 @@ There are a number files to edit to configure the server,
 each of these are already documented:
 
 - [server.properties](http://minecraft.gamepedia.com/Server.properties)
-- [bukkit.yml](http://wiki.bukkit.org/Bukkit.yml)
+- [bukkit.yml](https://bukkit.fandom.com/wiki/Bukkit.yml)
 - [spigot.yml](https://www.spigotmc.org/wiki/spigot-configuration/)
 - [Server Icons](https://www.spigotmc.org/wiki/server-icon/)
 
